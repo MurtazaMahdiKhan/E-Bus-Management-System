@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - E-Bus Management</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h1>User Dashboard</h1>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </header>
+        
+        <main class="dashboard">
+            <section class="search-section">
+                <h2>Search Bus</h2>
+                <form id="searchForm" class="search-form">
+                    <input type="text" id="searchSource" placeholder="Source Location" required>
+                    <input type="text" id="searchDestination" placeholder="Destination" required>
+                    <button type="submit">Search Buses</button>
+                </form>
+            </section>
+
+            <section class="results-section">
+                <h2>Available Buses</h2>
+                <div id="busResults" class="bus-list"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="user.js"></script>
+</body>
+</html>

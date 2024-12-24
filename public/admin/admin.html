@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - E-Bus Management</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h1>Admin Dashboard</h1>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </header>
+        
+        <main class="dashboard">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>Total Buses</h3>
+                    <p id="totalBuses">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Drivers</h3>
+                    <p id="activeDrivers">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Registered Users</h3>
+                    <p id="registeredUsers">Loading...</p>
+                </div>
+            </div>
+
+            <div class="management-section">
+                <h2>User Management</h2>
+                <div id="userList" class="user-list"></div>
+            </div>
+
+            <div class="management-section">
+                <h2>Bus Management</h2>
+                <div id="busList" class="bus-list"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

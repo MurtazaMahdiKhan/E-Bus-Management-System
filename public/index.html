@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Bus Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>E-Bus Management System</h1>
+        </header>
+        
+        <main>
+            <div class="auth-container">
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="showForm('login')">Login</button>
+                    <button class="tab-btn" onclick="showForm('register')">Register</button>
+                </div>
+
+                <!-- Login Form -->
+                <form id="loginForm" class="auth-form">
+                    <h2>Login</h2>
+                    <select id="loginRole" required>
+                        <option value="">Select Role</option>
+                        <option value="admin">Admin</option>
+                        <option value="driver">Driver</option>
+                        <option value="user">User</option>
+                    </select>
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+
+                <!-- Registration Form -->
+                <form id="registerForm" class="auth-form hidden">
+                    <h2>Register</h2>
+                    <select id="registerRole" required>
+                        <option value="">Select Role</option>
+                        <option value="driver">Driver</option>
+                        <option value="user">User</option>
+                    </select>
+                    <input type="text" id="registerName" placeholder="Full Name" required>
+                    <input type="email" id="registerEmail" placeholder="Email" required>
+                    <input type="password" id="registerPassword" placeholder="Password" required>
+                    <input type="tel" id="registerPhone" placeholder="Phone Number" required>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

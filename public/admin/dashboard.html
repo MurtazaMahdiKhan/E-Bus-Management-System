@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Dashboard - E-Bus Management</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h1>Driver Dashboard</h1>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </header>
+        
+        <main class="dashboard">
+            <section class="bus-info-section">
+                <h2>Bus Information</h2>
+                <form id="busInfoForm" class="bus-form">
+                    <input type="text" id="busNumber" placeholder="Bus Number" required>
+                    <input type="text" id="busType" placeholder="Bus Type" required>
+                    <input type="text" id="source" placeholder="Source Location" required>
+                    <input type="text" id="destination" placeholder="Destination" required>
+                    <input type="text" id="capacity" placeholder="Seating Capacity" required>
+                    <button type="submit">Update Bus Information</button>
+                </form>
+            </section>
+
+            <section class="location-section">
+                <h2>Current Location</h2>
+                <div class="location-update">
+                    <button id="updateLocationBtn">Update Current Location</button>
+                    <p id="currentLocation">Not available</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/location-tracker.js"></script>
+    <script src="driver.js"></script>
+</body>
+</html>
